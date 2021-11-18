@@ -35,11 +35,11 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color:  var(--soft-violet);
+    background: linear-gradient(180deg, #af67e9, #6565e7);
 }
 
 .card {
-    width: 90%;
+    width: 85%;
     text-align: center;
     background-color: #fff;
     border-radius: 25px;
