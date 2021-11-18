@@ -1,6 +1,6 @@
 :root {
     --font-size: 12px;
-    --font-family:  'Kumbh Sans', sans-serif;;
+    --font-family:  'Kumbh Sans', sans-serif;
     --text-dark-blue: hsl(238, 29%, 16%);
     --text-soft-red: hsl(14, 88%, 65%);
     --text-very-grayish-blue: hsl(237, 12%, 33%);
@@ -16,6 +16,7 @@ html {
     box-sizing: border-box;
     font-size: var(--font-size);
     font-family: var(--font-family);
+    font-weight: 400;
 }
 
 *,
@@ -27,4 +28,92 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:  var(--soft-violet);
+}
+
+.card {
+    width: 90%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.image-mobile {
+    width: 70%;
+    margin-top: -9rem;
+}
+
+.shadow {
+    width: 70%;
+    margin-top: -6.5rem;
+}
+
+.faq {
+    text-align: start;
+    padding: 0 2rem 2rem;
+}
+
+.title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: var(--text-dark-blue);
+}
+
+details {
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border-width: 0;
+    color: var(--light-blue);
+    background-color: var(--light-blue);
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+}
+summary {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: var(--text-very-grayish-blue);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: url(images/icon-arrow-down.svg);
+  }
+
+details[open] summary:after {
+    content: url(images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+details[open] > summary {
+    color: var(--text-dark-blue);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+details p {
+    color: var(--text-grayish-blue);
+    width: 90%;
 }
