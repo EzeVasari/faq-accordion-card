@@ -1,0 +1,30 @@
+:root {
+    --font-size: 12px;
+    --font-family: 'Red Hat Display', sans-serif;
+    --text-dark-blue: hsl(238, 29%, 16%);
+    --text-soft-red: hsl(14, 88%, 65%);
+    --text-very-grayish-blue: hsl(237, 12%, 33%);
+    --text-grayish-blue: hsl(240, 6%, 50%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --light-blue: hsl(240, 5%, 91%);
+}
+ 
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
