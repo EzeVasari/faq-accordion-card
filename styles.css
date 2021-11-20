@@ -35,11 +35,12 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(180deg, #af67e9, #6565e7);
+    background: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
 }
 
 .card {
     width: 85%;
+    margin-top: 5rem;
     text-align: center;
     background-color: #fff;
     border-radius: 25px;
@@ -50,13 +51,17 @@ main {
 }
 
 .image-mobile {
-    width: 70%;
-    margin-top: -9rem;
+    width: 65%;
+    margin-top: -8rem;
 }
 
-.shadow {
-    width: 70%;
+.shadow-mobile {
+    width: 65%;
     margin-top: -6.5rem;
+}
+
+.image-box, .image-desktop, .shadow-desktop {
+    display: none;
 }
 
 .faq {
@@ -71,24 +76,25 @@ main {
     color: var(--text-dark-blue);
 }
 
-details {
-}
-
 hr {
     width: 100%;
     height: 1px;
     border-width: 0;
     color: var(--light-blue);
     background-color: var(--light-blue);
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
+    margin-block-start: 1.3rem;
+    margin-block-end: 1.3rem;
 }
+
 summary {
     display: flex;
     justify-content: space-between;
     list-style: none;
     color: var(--text-very-grayish-blue);
 }
+    summary:hover {
+        color: var(--text-soft-red);
+    }
 
 summary::-webkit-details-marker {
     display: none;
@@ -96,7 +102,7 @@ summary::-webkit-details-marker {
 
 summary::after {
     content: url(images/icon-arrow-down.svg);
-  }
+}
 
 details[open] summary:after {
     content: url(images/icon-arrow-down.svg);
@@ -116,4 +122,156 @@ details[open] > summary {
 details p {
     color: var(--text-grayish-blue);
     width: 90%;
+}
+
+
+/* Mediaqueries */
+
+@media (min-width: 576px) { 
+
+    .card {
+        width: 80%;
+    }
+
+    .image-mobile {
+        width: 60%;
+        margin-top: -11rem;
+    }
+    
+    .shadow-mobile {
+        width: 60%;
+        margin-top: -8.5rem;
+    }
+
+    summary, details[open] > summary {
+        font-size: 1.3rem;
+    }
+
+    details p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .card {
+        width: 75%;
+    }
+
+    .image-mobile {
+        width: 50%;
+    }
+
+    .shadow-mobile {
+        width: 50%;
+    }
+
+    summary, details[open] > summary {
+        font-size: 1.5rem;
+    }
+
+    details p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: 90%;
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .hero {
+        width: 50%;
+    }
+
+    .image-mobile, .shadow-mobile {
+        display: none;
+    }
+
+    .image-desktop {
+        display: block;
+        width: 100%;
+        margin-left: -7rem;
+        margin-top: -2rem;
+    }
+
+    .image-box {
+        position: absolute;
+        display: block;
+        margin-left: -12%;
+        margin-top: -21%;
+    }
+
+    .shadow-desktop {
+        position: absolute;
+        display: block;
+        width: 70%;
+        margin-top: -55%;
+        margin-left: -32%;
+        z-index: 1;
+    }
+
+    .faq {
+        width: 50%;
+    }
+
+    .title {
+        text-align: start;
+    }
+
+    summary, details[open] > summary {
+        font-size: 1.3rem;
+    }
+
+    details p {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        width: 60%;
+    }
+
+    .image-desktop {
+        width: 130%;
+        margin-left: -40%;
+    }
+
+    .shadow-desktop {
+        width: 70%;
+        margin-top: -53%;
+        margin-left: -45%;
+    }
+
+    .image-box {
+        margin-top: -16%;
+        margin-left: -12%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .card {
+        width: 50%;
+    }
+    .image-desktop {
+        width: 110%;
+        margin-left: -28%;
+    }
+
+    .shadow-desktop {
+        width: 60%;
+        margin-top: -45%;
+        margin-left: -41%;
+    }
+
+    .image-box {
+        width: 12%;
+        margin-top: -12.5%;
+        margin-left: -8%;
+    }
 }
